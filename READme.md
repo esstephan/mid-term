@@ -11,13 +11,13 @@
 ## Grading Outline
 
 
-Objects:
+Objects: Complete
 
-Functions:
+Functions: Complete
 
-Higher Order Functions:
+Higher Order Functions: Complete
 
-Concepts:
+Concepts: Complete
  
 
 

@@ -3,11 +3,26 @@ var loop = function(collection, callback) {
     for (var i = 0; i < collection.length; i++) {
       callback(collection[i], i);
     }
-  }
-};
+  };
 
 // write your talkToUser function here:
-
+var talkToUser = function(collection, promptType){
+	if (promptType === 'log'){
+		loop(collection,function(item, index){
+			console.log(index+1 + '. ' + item);
+		});
+	}
+	else if (promptType === 'alert'){
+		loop (collection, function(item, index){
+			alert(index+1 + '. ' + item);
+		})
+	}
+	else if (promptType === 'prompt'){
+		loop (collection, function(item, index){
+			prompt(index+1 + '. ' + item);
+		})
+	};
+};
 
 // Use this to test your talkToUser function:
 
@@ -22,3 +37,5 @@ var funFacts = [
 "Jupiter is the fastest spinning planet in our Solar System rotating on average once in just under 10 hours. "
 
 ];
+
+talkToUser(funFacts, 'log');
